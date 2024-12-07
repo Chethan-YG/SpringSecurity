@@ -32,9 +32,9 @@ cd SpringSecurity
 
 To set up your MySQL database, create a database named security, then configure your application.properties file with the database URL and credentials. Make sure to use environment variables to secure sensitive information.
 
-### application.properties
+#### application.properties
 
-### Database Configuration
+#### Database Configuration
 - spring.datasource.url=jdbc:mysql://localhost:3306/${DB_NAME:security}
 - spring.datasource.username=${DB_USERNAME:root}
 - spring.datasource.password=${DB_PASSWORD:yourpassword}
@@ -47,12 +47,12 @@ Replace the yourpassword default with your actual database password through envi
 ### 3. Configure OAuth2 (Google and GitHub)
 In application.properties, add your OAuth credentials from Google and GitHub.
 
-### Google OAuth Configuration
+#### Google OAuth Configuration
 - spring.security.oauth2.client.registration.google.client-id=${GOOGLE_CLIENT_ID}
 - spring.security.oauth2.client.registration.google.client-secret=${GOOGLE_CLIENT_SECRET}
 - spring.security.oauth2.client.registration.google.scope=email,profile
 
-### GitHub OAuth Configuration
+#### GitHub OAuth Configuration
 - spring.security.oauth2.client.registration.github.client-id=${GITHUB_CLIENT_ID}
 - spring.security.oauth2.client.registration.github.client-secret=${GITHUB_CLIENT_SECRET}
 - spring.security.oauth2.client.registration.github.scope=email,profile
@@ -71,32 +71,13 @@ The application will be available at http://localhost:8080.
 Once the application is running:
 
 You can log in using your Google or GitHub credentials.
-Directory Structure
-
-src
-│
-├── main
-│   ├── java
-│   │   ├── com
-│   │   │   └── chethan
-│   │   │       └── springsecurity
-│   │   │           ├── controller
-│   │   │           ├── model
-│   │   │           └── repository
-│   │   ├── resources
-│   │   │   ├── application.properties
-│   │   │   ├── static
-│   │   │   └── templates
-│   └── test
-├── pom.xml
-
 
 - controller: Contains controllers for managing web requests.
 - model: Contains entity classes for interacting with the database.
 - repository: Contains interfaces for data access using Spring Data JPA.
 - templates: Contains Thymeleaf templates for rendering views.
   
-### Dependencies
+#### Dependencies
 - Spring Boot: The main framework for building the application.
 - Spring Security: For handling OAuth2 login and securing the application.
 - Spring Data JPA: For database interaction with MySQL.
