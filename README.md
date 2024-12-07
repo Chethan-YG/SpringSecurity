@@ -32,9 +32,9 @@ cd SpringSecurity
 
 To set up your MySQL database, create a database named security, then configure your application.properties file with the database URL and credentials. Make sure to use environment variables to secure sensitive information.
 
-# application.properties
+### application.properties
 
-# Database Configuration
+### Database Configuration
 - spring.datasource.url=jdbc:mysql://localhost:3306/${DB_NAME:security}
 - spring.datasource.username=${DB_USERNAME:root}
 - spring.datasource.password=${DB_PASSWORD:yourpassword}
@@ -47,12 +47,12 @@ Replace the yourpassword default with your actual database password through envi
 ### 3. Configure OAuth2 (Google and GitHub)
 In application.properties, add your OAuth credentials from Google and GitHub.
 
-# Google OAuth Configuration
+### Google OAuth Configuration
 - spring.security.oauth2.client.registration.google.client-id=${GOOGLE_CLIENT_ID}
 - spring.security.oauth2.client.registration.google.client-secret=${GOOGLE_CLIENT_SECRET}
 - spring.security.oauth2.client.registration.google.scope=email,profile
 
-# GitHub OAuth Configuration
+### GitHub OAuth Configuration
 - spring.security.oauth2.client.registration.github.client-id=${GITHUB_CLIENT_ID}
 - spring.security.oauth2.client.registration.github.client-secret=${GITHUB_CLIENT_SECRET}
 - spring.security.oauth2.client.registration.github.scope=email,profile
